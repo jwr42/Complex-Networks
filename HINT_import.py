@@ -3,15 +3,15 @@ This program creates adjacency matrices of network files downloaded from
 the High-quality INTeractomes (HINT) website: 
 http://hint.yulab.org/
 
-@author: Jonathan Roberts
+@author: Jonathan Roberts (https://github.com/jwr42)
 """
 
 # =============================================================================
-# Please provide the address of the HINT file and a filename for the output:
+# Please provide the address of the HINT data and a filename for the output:
 
-file = ''
+data = ''
 # e.g. '../Downloads/HomoSapiens_htb_hq.txt'
-filename = ''
+name = ''
 # e.g.'Human_Adjacency_Matrix'
 
 # =============================================================================
@@ -23,7 +23,7 @@ import time
 # Starting timer
 Start = time.clock()
 # Importing HINT data from file
-df = pd.read_csv(file,sep='\t')
+df = pd.read_csv(data,sep='\t')
 # Select the two relevant columns
 col_A = df['Uniprot_A']
 col_B = df['Uniprot_B']
@@ -53,7 +53,7 @@ for i in range(N_edges):
     A_matrix[i_head,i_foot]=1
     print(i+1)
 # Saving the adjacency matrix
-np.save(filename,A_matrix)
+np.save(name,A_matrix)
 # Printing the runtime
 Stop = time.clock()
 print("Program Run Time: %.2f mins"%((Stop-Start)/60))
