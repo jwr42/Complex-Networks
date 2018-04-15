@@ -1,2 +1,2 @@
 # ComplexNetworks
-A repository for the python code created for my undergraduate research project.
+A repository of the python code created for my undergraduate research project.
