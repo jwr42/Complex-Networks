@@ -6,3 +6,5 @@ plex.py is a python module that contains a number of functions designed to creat
 HINT_import.py creates adjacency matrices of network files downloaded from the High-quality INTeractomes (HINT) website.
 
 TCNG_import.py creates adjacency matrices of network files downloaded from The Cancer Network Galaxy (TCNG) website.
+
+flowchart.pdf is an examples of how a selection of some of the function in plex.py interact with one another, as well as with the HINT_import.py and TCNG_import.py functions.
