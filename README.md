@@ -7,4 +7,4 @@ HINT_import.py creates adjacency matrices of network files downloaded from the H
 
 TCNG_import.py creates adjacency matrices of network files downloaded from The Cancer Network Galaxy (TCNG) website.
 
-flowchart.pdf is an examples of how a selection of some of the function in plex.py interact with one another, as well as with the HINT_import.py and TCNG_import.py functions.
+flowchart.pdf is an example of how some of the functions in plex.py interact with one another, as well as with the HINT_import.py and TCNG_import.py functions.
