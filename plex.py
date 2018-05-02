@@ -164,27 +164,24 @@ def MultiRandom(N,PA):
         MR[:,i] = Degree(A)
     return MR 
 
-def Edges(A,K): 
+def Edges(A): 
     """
     Edges creates a 2D array of all the edges in a network.
     Input:
         A = adjacency matrix
-        K = array of degree values
     Output:
         edges = 2D array of edges (each row is an edge)
     """
     N = len(A[0,:])
-    N_edges = int(sum(K)/2)
+    N_edges = sum(sum(A))
     edges = np.zeros((int(N_edges),2))
-    count1=0 #only count a triangle portion of the matrix
-    count2=0 #location in the edges array
+    count=0
     for i in np.arange(0,N,1):
-        count1+=1
-        for j in np.arange(count1,N,1):
+        for j in np.arange(0,N,1):
             if A[i,j] == 1:
-                edges[count2,0]=i
-                edges[count2,1]=j
-                count2+=1
+                edges[count,0]=i
+                edges[count,1]=j
+                count+=1
     return edges
 
 def TotalEdges(K):
