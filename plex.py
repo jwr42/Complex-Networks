@@ -112,10 +112,15 @@ def Degree(A):
     Output:
         K = array of degree values 
     """
-    N=len(A[0,:])
-    K = np.zeros(N)
+    N = len(A[0,:])
+    # rows are K_out, columns are K_in
+    K_in = np.zeros(N)
     for i in np.arange(0,N,1):
-        K[i] = sum(A[i,:])
+        K_in[i] = sum(A[:,i])    
+    K_out = np.zeros(N)
+    for i in np.arange(0,N,1):
+        K_out[i] = sum(A[i,:])
+    K = K_in + K_out
     return K
 
 def Cluster(A):
